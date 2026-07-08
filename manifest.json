@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Moe Kaiketsu",
+  "version": "1.7.0",
+  "description": "Anime image shown inline above Codeforces problem statements, sourced from your choice of provider (waifu.im, Safebooru, Danbooru, Yande.re) with fully free-text, user-editable tags and optional per-provider API keys to reduce rate limiting. Safe-rated content only, one image per problem cached so it won't change on reload, with a small message shown instead of the image if it's ever unavailable.",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": [
+    "https://api.waifu.im/*",
+    "https://safebooru.org/*",
+    "https://danbooru.donmai.us/*",
+    "https://yande.re/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://codeforces.com/problemset/problem/*", "*://*.codeforces.com/problemset/problem/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+      "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div id="popup">
+    <h1>Moe Kaiketsu</h1>
+
+    <label class="row"><span>Enable on Codeforces</span><input type="checkbox" id="enable-toggle" /></label>
+    <p class="hint">Applies instantly to the active tab.</p>
+
+    <div class="section">
+      <label class="field">
+        <span>Image source</span>
+        <select id="provider-select"></select>
+      </label>
+
+      <label class="field">
+        <span>Tags <span id="tag-cap-hint" class="muted"></span></span>
+        <input type="text" id="tag-input" list="tag-suggestions" placeholder="e.g. 1girl, smile" />
+        <datalist id="tag-suggestions"></datalist>
+      </label>
+
+      <label class="field" id="exclude-field">
+        <span>Exclude tags</span>
+        <input type="text" id="exclude-input" list="tag-suggestions" placeholder="e.g. glasses" />
+      </label>
+
+      <label class="field" id="orientation-field">
+        <span>Orientation</span>
+        <select id="orientation-select">
+          <option value="">Any</option>
+          <option value="LANDSCAPE">Landscape</option>
+          <option value="PORTRAIT">Portrait</option>
+        </select>
+      </label>
+
+      <p class="hint">Type any tag you want, freely; this is a plain text box, not a fixed list. Every source is still always queried with a hardcoded safe-content filter that isn't shown here and can't be changed.</p>
+
+      <label class="field">
+        <span>Image size</span>
+        <select id="size-select">
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Account (optional)</div>
+      <p class="hint">Add your own key for this source to move off its anonymous rate limit. Stored locally, sent only to that provider, never anywhere else.</p>
+      <div id="credentials-container"></div>
+    </div>
+
+    <div class="row"><span>Favorites saved</span><span id="fav-count">0</span></div>
+    <div class="fav-actions">
+      <button id="view-fav-btn">Open favorites page</button>
+      <button id="clear-fav-btn">Clear all</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

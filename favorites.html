@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Moe Kaiketsu — Favorites</title>
+  <link rel="stylesheet" href="favorites.css" />
+</head>
+<body>
+  <div id="banner" class="banner hidden">
+    <img id="banner-img" alt="" />
+    <div class="banner-overlay">
+      <div id="banner-title" class="banner-title"></div>
+      <button id="banner-clear-btn" class="banner-clear-btn">Remove banner</button>
+    </div>
+  </div>
+
+  <div id="page">
+    <header>
+      <h1>Moe Kaiketsu</h1>
+      <span class="subtitle">Favorites</span>
+      <span id="count-badge">0</span>
+    </header>
+
+    <div class="toolbar">
+      <input type="text" id="search-input" placeholder="Search by problem title" />
+      <select id="source-filter">
+        <option value="">All sources</option>
+      </select>
+      <button id="clear-all-btn">Clear all</button>
+    </div>
+
+    <p class="hint">Tap the flag on any card to set it as the banner above.</p>
+
+    <div id="grid" class="grid"></div>
+    <div id="empty-state" class="empty-state hidden">No favorites yet. Tap the star on any image on a problem page to save it here.</div>
+  </div>
+  <script src="favorites.js"></script>
+</body>
+</html>

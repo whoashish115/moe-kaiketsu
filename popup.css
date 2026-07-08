@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #0a0a0a;
+  --panel: #131313;
+  --border: #2b2b2b;
+  --text: #f2f2f2;
+  --text-muted: #8a8a8a;
+  --invert-bg: #f2f2f2;
+  --invert-text: #0a0a0a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 320px;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+}
+#popup { padding: 14px; }
+h1 {
+  font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin: 0 0 12px;
+  color: var(--text);
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--border);
+}
+.hint { font-size: 10px; line-height: 1.5; color: var(--text-muted); margin: 4px 0 10px; }
+.section {
+  margin: 4px 0 8px;
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.section-title {
+  font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 8px;
+}
+.field:last-child { margin-bottom: 0; }
+.field span { font-size: 11px; color: #c7c7c7; font-weight: 500; }
+.field span .muted { font-size: 9px; color: #6a6a6a; font-weight: 400; }
+.field select,
+.field input[type=text],
+.field input[type=password] {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 6px;
+  padding: 7px 8px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 11px;
+}
+.field select:focus,
+.field input:focus {
+  outline: 1.5px solid var(--text);
+  outline-offset: 1px;
+}
+#credentials-container .field { margin-bottom: 8px; }
+.fav-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+.fav-actions button {
+  flex: 1;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 7px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+.fav-actions button:hover {
+  background: var(--invert-bg);
+  color: var(--invert-text);
+}
+
+/* checkbox: keep native but tinted to the monochrome palette */
+input[type=checkbox] { accent-color: var(--text); }
