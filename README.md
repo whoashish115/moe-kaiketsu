@@ -2,7 +2,7 @@
 
 ![icon](icon128.png)
 
-**Anime images on Codeforces** - shows a hand‑picked (but deterministic) anime illustration right above every problem statement. Customise the source, tags, size, and even save your favourites.
+shows a hand‑picked (but deterministic) anime illustration right above every problem statement. Customise the source, tags, size, and even save your favourites.
 
 
 ## Features
