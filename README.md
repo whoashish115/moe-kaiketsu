@@ -19,7 +19,16 @@ shows a hand‑picked (but deterministic) anime illustration right above every p
 | **API keys (optional)** | If you hit rate limits, add your own account credentials for higher request caps - stored locally, never shared. |
 
 
-## How image selection works
+
+
+## Demo
+
+![icon](demo.png)
+
+
+## Notes
+
+### How image selection works
 
 - Every Codeforces problem gets a **stable ID** from its URL.
 - The extension fetches a batch of up to 30 images matching your current tags and filters.
@@ -30,9 +39,6 @@ shows a hand‑picked (but deterministic) anime illustration right above every p
   - *“No image found”* - your tags returned zero results.
   - *“Rate limit hit”* - you’ve exceeded the provider’s anonymous limit (add an API key to fix).
   - *“Image unavailable”* - network issues or all images failed.
-
-
-## Providers & settings explained
 
 ### waifu.im
 - Works well with general tags like `waifu`, `maid`, `knight`.
@@ -95,7 +101,7 @@ All changes are saved automatically.
 For deeper issues (e.g., API errors, network logs), open `chrome://extensions`, find this extension, and click the **service worker** link - all backend logs are printed there.
 
 
-## Privacy & storage
+## Privacy & Storage
 
 - All your settings, tags, API keys, cached images, and favourites are stored **locally** in your browser’s `chrome.storage.local`.
 - Nothing is sent anywhere except:
